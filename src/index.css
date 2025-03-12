@@ -9,6 +9,23 @@ body {
 }
 
 @layer utilities {
+
+  @keyframes blinking {
+    0%,100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .animate-blinking {
+    animation: blinking 0.8s step-end infinite;
+  }
+}
+
+
+
   @keyframes loading {
     0% {
       transform: translateX(-100%);
@@ -21,4 +38,4 @@ body {
   .animate-loading-bar {
     animation: loading 0.8s ease infinite;
   }
-}
+
